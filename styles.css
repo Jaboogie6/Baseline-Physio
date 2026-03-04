@@ -1,12 +1,12 @@
 :root{
-  --bg: #000;
-  --panel: rgba(255,255,255,0.06);
-  --panel2: rgba(255,255,255,0.09);
-  --text: rgba(255,255,255,0.92);
-  --muted: rgba(255,255,255,0.70);
-  --line: rgba(255,255,255,0.12);
-  --accent: #b6d4f5;
-  --accent2: #25D366;
+  --bg: #f6f8fc;          /* page background */
+  --panel: rgba(0,0,0,0.04);
+  --panel2: rgba(0,0,0,0.06);
+  --text: rgba(0,0,0,0.90);
+  --muted: rgba(0,0,0,0.62);
+  --line: rgba(0,0,0,0.10);
+  --accent: #2563eb;      /* sporty blue */
+  --accent2: #16a34a;     /* WhatsApp-ish green */
   --radius: 18px;
 }
 
@@ -20,33 +20,33 @@ body{
   overflow-x: hidden;
 }
 
-/* ===== Brighter animated background ===== */
+/* ===== Light animated background ===== */
 .bg-wrap{
   position: fixed;
   inset: 0;
   z-index: -2;
   overflow: hidden;
   background:
-    radial-gradient(1200px 800px at 20% 10%, rgba(182,212,245,0.35), transparent 60%),
-    radial-gradient(900px 700px at 90% 20%, rgba(90,120,255,0.30), transparent 60%),
-    radial-gradient(1000px 900px at 50% 90%, rgba(30,255,200,0.18), transparent 60%),
-    linear-gradient(120deg, rgba(15,15,20,1), rgba(0,0,0,1));
+    radial-gradient(900px 600px at 20% 10%, rgba(37,99,235,0.14), transparent 60%),
+    radial-gradient(800px 600px at 90% 20%, rgba(182,212,245,0.55), transparent 60%),
+    radial-gradient(900px 700px at 50% 90%, rgba(22,163,74,0.10), transparent 60%),
+    linear-gradient(180deg, #ffffff, #f6f8fc);
 }
 
 .bg-gradient{
-  position:absolute;
-  inset:-40%;
+  position: absolute;
+  inset: -40%;
   background: conic-gradient(
     from 180deg at 50% 50%,
-    rgba(182,212,245,0.22),
-    rgba(90,120,255,0.16),
-    rgba(0,0,0,0),
-    rgba(30,255,200,0.12),
-    rgba(182,212,245,0.22)
+    rgba(37,99,235,0.14),
+    rgba(182,212,245,0.38),
+    rgba(255,255,255,0.0),
+    rgba(22,163,74,0.10),
+    rgba(37,99,235,0.14)
   );
-  filter: blur(50px);
-  opacity: 1;
-  animation: spin 18s linear infinite;
+  filter: blur(60px);
+  opacity: 0.9;
+  animation: spin 22s linear infinite;
 }
 
 .blob{
@@ -55,22 +55,22 @@ body{
   height: 520px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 30% 30%, rgba(182,212,245,0.40), transparent 55%),
-    radial-gradient(circle at 70% 70%, rgba(90,120,255,0.30), transparent 55%);
-  filter: blur(18px);
-  opacity: 0.75;
-  animation: floaty 12s ease-in-out infinite;
+    radial-gradient(circle at 30% 30%, rgba(37,99,235,0.22), transparent 55%),
+    radial-gradient(circle at 70% 70%, rgba(182,212,245,0.55), transparent 55%);
+  filter: blur(20px);
+  opacity: 0.6;
+  animation: floaty 14s ease-in-out infinite;
 }
-.blob.b1{ left: -120px; top: 120px; }
+.blob.b1{ left: -160px; top: 120px; }
 .blob.b2{
   width: 680px; height: 680px;
   left: 55%; top: 55%;
-  opacity: 0.65;
-  animation-duration: 16s;
+  opacity: 0.45;
+  animation-duration: 18s;
   animation-delay: -4s;
   background:
-    radial-gradient(circle at 40% 30%, rgba(30,255,200,0.22), transparent 55%),
-    radial-gradient(circle at 60% 70%, rgba(182,212,245,0.28), transparent 55%);
+    radial-gradient(circle at 40% 30%, rgba(22,163,74,0.14), transparent 55%),
+    radial-gradient(circle at 60% 70%, rgba(37,99,235,0.16), transparent 55%);
 }
 
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -336,3 +336,4 @@ footer{
   .grid{ grid-template-columns: 1fr; }
   .brand .name{ display:none; }
 }
+
